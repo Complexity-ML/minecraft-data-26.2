@@ -6,11 +6,12 @@ Independent, language-neutral Minecraft Java 26.2 dataset maintained by
 
 | Minecraft Java | Protocol | Data version | Release |
 | --- | --- | --- | --- |
-| 26.2 | 776 | 4903 | [`complexity-26.2.2`](https://github.com/Complexity-ML/minecraft-data-26.2/releases/tag/complexity-26.2.2) |
+| 26.2 | 776 | 4903 | [`complexity-26.2.3`](https://github.com/Complexity-ML/minecraft-data-26.2/releases/tag/complexity-26.2.3) |
 
 The `data/pc/26.2` directory includes the generated game registries plus the
 verified protocol changes required by the official server: world clocks, login
-`onlineMode`, chunk fluid counts and the 26.2 entity metadata serializer order.
+`onlineMode`, chunk fluid counts, the 26.2 entity metadata serializer order and
+the advancement icon item-stack template.
 
 ## Use this repository
 

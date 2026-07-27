@@ -2214,6 +2214,55 @@
         }
       ]
     ],
+    "ItemStackTemplate": [
+      "container",
+      [
+        {
+          "name": "itemId",
+          "type": "varint"
+        },
+        {
+          "name": "itemCount",
+          "type": "varint"
+        },
+        {
+          "name": "addedComponentCount",
+          "type": "varint"
+        },
+        {
+          "name": "removedComponentCount",
+          "type": "varint"
+        },
+        {
+          "name": "components",
+          "type": [
+            "array",
+            {
+              "count": "addedComponentCount",
+              "type": "SlotComponent"
+            }
+          ]
+        },
+        {
+          "name": "removeComponents",
+          "type": [
+            "array",
+            {
+              "count": "removedComponentCount",
+              "type": [
+                "container",
+                [
+                  {
+                    "name": "type",
+                    "type": "SlotComponentType"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    ],
     "Slot": [
       "container",
       [
@@ -9528,7 +9577,7 @@
                                     },
                                     {
                                       "name": "icon",
-                                      "type": "Slot"
+                                      "type": "ItemStackTemplate"
                                     },
                                     {
                                       "name": "frameType",
