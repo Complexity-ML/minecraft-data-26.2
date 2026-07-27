@@ -1,15 +1,39 @@
-# minecraft-data
+# Minecraft Data 26.2
 
-[![Discord](https://img.shields.io/badge/chat-on%20discord-brightgreen.svg)](https://discord.gg/GsEFRM8)
-[![Gitter](https://img.shields.io/badge/chat-on%20gitter-brightgreen.svg)](https://gitter.im/PrismarineJS/general)
-[![Irc](https://img.shields.io/badge/chat-on%20irc-brightgreen.svg)](https://irc.gitter.im/)
-[![Build Status](https://github.com/PrismarineJS/minecraft-data/workflows/CI/badge.svg)](https://github.com/PrismarineJS/minecraft-data/actions?query=workflow%3A%22CI%22)
+Independent, language-neutral Minecraft Java 26.2 dataset maintained by
+[Complexity-ML](https://github.com/Complexity-ML) for
+[GAME LAB](https://github.com/Complexity-ML/game-lab).
 
-Language independent module providing minecraft data for minecraft clients, servers and libraries.
+| Minecraft Java | Protocol | Data version | Release |
+| --- | --- | --- | --- |
+| 26.2 | 776 | 4903 | [`complexity-26.2.2`](https://github.com/Complexity-ML/minecraft-data-26.2/releases/tag/complexity-26.2.2) |
+
+The `data/pc/26.2` directory includes the generated game registries plus the
+verified protocol changes required by the official server: world clocks, login
+`onlineMode`, chunk fluid counts and the 26.2 entity metadata serializer order.
+
+## Use this repository
+
+```bash
+git clone https://github.com/Complexity-ML/minecraft-data-26.2.git
+```
+
+Node.js consumers should use the packaged
+[`node-minecraft-data-26.2`](https://github.com/Complexity-ML/node-minecraft-data-26.2)
+release instead of cloning this repository as an npm dependency.
+
+This repository retains historical Java and Bedrock datasets from the upstream
+project for compatibility. Complexity-ML specifically maintains the Java
+`data/pc/26.2` dataset.
+
+## Included historical data
+
+Language independent module providing Minecraft data for clients, servers and
+libraries.
 
 Supports
 * Minecraft PC version 0.30c (classic), 1.7.10, 1.8.8, 1.9 (15w40b, 1.9, 1.9.1-pre2, 1.9.2, 1.9.4),
-1.10 (16w20a, 1.10-pre1, 1.10, 1.10.1, 1.10.2), 1.11 (16w35a, 1.11, 1.11.2), 1.12 (17w15a, 17w18b, 1.12-pre4, 1.12, 1.12.1, 1.12.2), 1.13 (17w50a, 1.13, 1.13.1, 1.13.2-pre1, 1.13.2-pre2, 1.13.2), 1.14 (1.14, 1.14.1, 1.14.3, 1.14.4), 1.15 (1.15, 1.15.1, 1.15.2), 1.16 (20w13b, 20w14a, 1.16-rc1, 1.16, 1.16.1, 1.16.2, 1.16.3, 1.16.4, 1.16.5), 1.17, 1.17.1, 1.18 (1.18, 1.18.1, 1.18.2), 1.19 (1.19, 1.19.2, 1.19.3, 1.19.4), 1.20 (1.20, 1.20.1, 1.20.2, 1.20.3, 1.20.4, 1.20.5, 1.20.6), 1.21 (1.21, 1.21.1, 1.21.3), 1.21.8, 1.21.9, 1.21.10
+1.10 (16w20a, 1.10-pre1, 1.10, 1.10.1, 1.10.2), 1.11 (16w35a, 1.11, 1.11.2), 1.12 (17w15a, 17w18b, 1.12-pre4, 1.12, 1.12.1, 1.12.2), 1.13 (17w50a, 1.13, 1.13.1, 1.13.2-pre1, 1.13.2-pre2, 1.13.2), 1.14 (1.14, 1.14.1, 1.14.3, 1.14.4), 1.15 (1.15, 1.15.1, 1.15.2), 1.16 (20w13b, 20w14a, 1.16-rc1, 1.16, 1.16.1, 1.16.2, 1.16.3, 1.16.4, 1.16.5), 1.17, 1.17.1, 1.18 (1.18, 1.18.1, 1.18.2), 1.19 (1.19, 1.19.2, 1.19.3, 1.19.4), 1.20 (1.20, 1.20.1, 1.20.2, 1.20.3, 1.20.4, 1.20.5, 1.20.6), 1.21 (1.21, 1.21.1, 1.21.3), 1.21.8, 1.21.9, 1.21.10, 1.21.11, and 26.2
 <!--NEXT PC-->
 * Minecraft bedrock version 0.14, 0.15, 1.0, 1.16.201, 1.16.210, 1.16.220, 1.17.0, 1.17.10, 1.17.30, 1.17.40, 1.18.0, 1.18.11, 1.18.30, 1.19.1, 1.19.10, 1.19.20, 1.19.21, 1.19.30, 1.19.40, 1.19.50, 1.19.60, 1.19.62, 1.19.63, 1.19.70, 1.19.80, 1.20.0, 1.20.10, 1.20.30, 1.20.40, 1.20.50, 1.20.61, 1.20.71, 1.20.80, 1.21.0, 1.21.2, 1.21.20, 1.21.30, 1.21.42, 1.21.50, 1.21.60, 1.21.70, 1.21.80, 1.21.90, 1.21.93, 1.21.100, 1.21.111, 1.21.120, 1.21.124, 1.21.130, 1.26.0, 1.26.10, 1.26.20, 1.26.30
 <!--NEXT BEDROCK-->
@@ -20,7 +44,7 @@ Minecraft-data is language independent, you can use it with these language speci
 
 | Wrapper name | Language | Data provided |
 | --- | --- | --- |
-| [node-minecraft-data](https://github.com/PrismarineJS/node-minecraft-data) | Node.js | everything |
+| [node-minecraft-data-26.2](https://github.com/Complexity-ML/node-minecraft-data-26.2) | Node.js | everything, including the Complexity-ML 26.2 dataset |
 | [python-minecraft-data](https://github.com/SpockBotMC/python-minecraft-data) | python | everything |
 | [minebase](https://github.com/py-mine/minebase) | python | everything |
 | [McData](https://github.com/McEx/McData) | Elixir | protocol |
@@ -75,8 +99,8 @@ These are the projects that use minecraft-data:
 
 | Project name | Language | Project type | Data used |
 | --- | --- | --- | --- |
-| [mineflayer](https://github.com/PrismarineJS/mineflayer) | Node.js | bot library | biomes, blocks, entities, instruments, items, materials, recipes |
-| [node-minecraft-protocol](https://github.com/PrismarineJS/node-minecraft-protocol) | Node.js | protocol serialization | protocol |
+| [mineflayer-26.2](https://github.com/Complexity-ML/mineflayer-26.2) | Node.js | bot library | biomes, blocks, entities, instruments, items, materials, recipes |
+| [node-minecraft-protocol-26.2](https://github.com/Complexity-ML/node-minecraft-protocol-26.2) | Node.js | protocol serialization | protocol |
 | [flying-squid](https://github.com/PrismarineJS/flying-squid) | Node.js | server library | biomes, blocks, materials |
 | [SpockBot](https://github.com/SpockBotMC/SpockBot) | Python | bot library | biomes, blocks, items, materials, windows, recipes |
 | [PhaseBot](https://github.com/phase/PhaseBot) | Java | bot | blocks, items, materials |
@@ -138,9 +162,19 @@ test/test.js to check the json file are valid relative to these schemas.
 These schemas can also be used to understand better how the json files are
 formatted in order to use it.
 
-## Contribute
+## Maintenance
 
-Please read https://github.com/PrismarineJS/prismarine-contribute
+Open Minecraft 26.2 and GAME LAB issues or pull requests in this repository.
+The generated source is maintained in
+[`minecraft-data-generator-26.2`](https://github.com/Complexity-ML/minecraft-data-generator-26.2).
+
+## Credits
+
+This dataset is derived from
+[PrismarineJS minecraft-data](https://github.com/PrismarineJS/minecraft-data)
+and retains the upstream history and contributor attribution. Complexity-ML
+maintains the 26.2 distribution independently and is not affiliated with
+Mojang or Microsoft.
 
 ## License
 
